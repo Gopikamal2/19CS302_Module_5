@@ -1,48 +1,48 @@
-# EX 23 C program to store and display the name, id and salary of an employee using structure(using array of structure).
+# EX 23 C program to store and display the name, id, age and salary of an employee using structure(using array of structure).
 ## DATE:
+08.06.2026
 ## AIM:
-To write a C program to store and display the name, id and salary of an employee using structure(using array of structure).
+To write a C program to store and display the name, id, age and salary of an employee using structure(using array of structure).
 
 ## Algorithm
+1. Start.
+  
+3. Define a variables.
+ 
+5. Write program to to store and display the name, id, age and salary of an employee
+using structure(using array of structure).
 
-1. Start the program and define a structure employee with fields id, name, and salary.
-
-2.Declare an array of structures to store details of employees.
-
-3.Read the name, id, and salary for each employee using a loop.
-
-4.Store the entered details in the structure array.
-
-5.Display the stored employee details and stop the program.
-   
-
+7. Read the value using scanf.
+  
+9. Ask the user to make an input.
+    
+11. Print out the answer.
+    
+13. End.  
 ## Program:
 ```
 #include<stdio.h>
 struct employee
 {
-    int id;
-    char name[100];
-    float salary;
-    
-};
+int id,age,salary;
+char name[30];
+}emp[100];
 int main()
 {
-    struct employee emp;
-    scanf("%[^\n]",emp.name);
-    scanf("%d",&emp.id);
-    scanf("%f",&emp.salary);
-    printf("Entered detail is:\n");
-    printf("Name: %s\n",emp.name);
-    printf("Id: %d\n",emp.id);
-    printf("Salary: %.2f\n",emp.salary);
-    return 0;
+int i,n;
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+scanf("%d %s %d %d",&emp[i].id,emp[i].name,&emp[i].age,&emp[i].salary);
 }
+printf("Employee Details\n");
+for(i=0;i<n;i++)
+printf("%d %s %d %d\n",emp[i].id,emp[i].name,emp[i].age,emp[i].salary);}
 ```
 
 ## Output:
 
-<img width="429" height="189" alt="Screenshot 2026-03-19 153545" src="https://github.com/user-attachments/assets/0e8df2fd-b146-4216-81ea-e37197756839" />
+<img width="1108" height="378" alt="image" src="https://github.com/user-attachments/assets/16d5bb03-06f5-46ce-93fc-ef93b28031b2" />
 
 
 ## Result:
