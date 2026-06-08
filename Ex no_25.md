@@ -1,48 +1,51 @@
-# EX 25 C program to test whether a number is positive, negative, or equal to zero using pointers
+# EX 25 C program to check whether a given character is a vowel or consonant using pointer
 ## DATE:
 ## AIM:
-To write a C program to test whether a number is positive, negative, or equal to zero using pointers
+To write a C program to check whether a given character is a vowel or consonant using pointer
 
 ## Algorithm
+1.Start.
 
-1.Start the program and declare an integer variable num and a pointer ptr.
+2.Declare a variable value of type char.
 
-2.Read the value of num from the user.
+3.Prompt the user to enter a value.
 
-3.Assign the address of num to the pointer ptr.
+4.Read the value using scanf.
 
-4.Use conditional statements to check the value pointed by ptr (positive, negative, or zero).
+5.Find vowel and consonants
 
-5.Display the result and stop the program.
+6.End.
 
 ## Program:
 ```
-/*
 #include <stdio.h>
-
-int main()
-{
-    int num;
-    int *ptr;
-
-    scanf("%d", &num);
-    ptr = &num;
-
-    if (*ptr > 0)
-        printf("the number is Positive");
-    else if (*ptr < 0)
-        printf("the number is negative");
-    else
-        printf("the number is zero");
-
-    return 0;
+int main() {
+ char str[100];
+ char *p;
+ int vowels = 0, consonants = 0;
+ scanf(" %[^\n]", str);
+ p = str;
+ while (*p != '\0') {
+ if ((*p >= 'A' && *p <= 'Z') || (*p >= 'a' && *p <= 'z')) {
+ char ch = (*p >= 'A' && *p <= 'Z') ? *p + 32 : *p;
+ if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+ vowels++;
+ } else {
+ consonants++;
+ }
+ }
+ p++;
+ }
+ printf("Vowels: %d\n", vowels);
+ printf("Consonants: %d\n", consonants);
+ return 0;
 }
-
 ```
 
 ## Output:
+<img width="825" height="308" alt="image" src="https://github.com/user-attachments/assets/4cbc3baf-4896-4edd-a22d-9a0bbb08e4fc" />
 
-<img width="484" height="158" alt="Screenshot 2026-03-19 154110" src="https://github.com/user-attachments/assets/796b9fbf-7f58-4b6f-a2c6-c3a57e459a0c" />
+
 
 
 ## Result:
